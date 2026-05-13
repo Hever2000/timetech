@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import heroWorkflow from '../assets/hero-workflow.png'
 
 export default function Hero() {
   return (
@@ -22,7 +23,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
-            AI Automation Engineer · Argentina
+            AI Automation Engineer
           </motion.div>
 
           <motion.h1
@@ -31,7 +32,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-[64px]"
           >
-            Elimina tareas manuales con{' '}
+            Automatiza los procesos de tu empresa con{' '}
             <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
               automatización e IA.
             </span>
@@ -102,138 +103,12 @@ export default function Hero() {
 
           {/* Main workflow card */}
           <div className="relative overflow-hidden rounded-2xl border border-border bg-surface/60 backdrop-blur-sm">
-            <div className="absolute top-0 left-0 right-0 h-8 bg-border/40 flex items-center px-3 gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
-              <span className="ml-3 text-[10px] text-text-secondary/40 font-mono">workflow — n8n editor</span>
-            </div>
-
-            <div className="p-6 pt-12">
-              <div className="relative aspect-[4/3] rounded-lg bg-bg/60 border border-border/50 overflow-hidden">
-                {/* Workflow nodes */}
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300">
-                  <defs>
-                    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
-                      <polygon points="0 0, 6 2, 0 4" fill="rgba(245,158,11,0.3)" />
-                    </marker>
-                    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="rgba(245,158,11,0)" />
-                      <stop offset="50%" stopColor="rgba(245,158,11,0.25)" />
-                      <stop offset="100%" stopColor="rgba(245,158,11,0)" />
-                    </linearGradient>
-                  </defs>
-
-                  {/* Connection lines */}
-                  <motion.path
-                    d="M 80 90 Q 120 90, 160 90"
-                    fill="none"
-                    stroke="url(#lineGlow)"
-                    strokeWidth="1.5"
-                    strokeDasharray="4 4"
-                    markerEnd="url(#arrowhead)"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity }}
-                  />
-                  <motion.path
-                    d="M 240 90 Q 280 90, 320 90"
-                    fill="none"
-                    stroke="url(#lineGlow)"
-                    strokeWidth="1.5"
-                    strokeDasharray="4 4"
-                    markerEnd="url(#arrowhead)"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.8, ease: 'easeInOut', repeat: Infinity }}
-                  />
-                  <motion.path
-                    d="M 200 170 Q 200 210, 200 250"
-                    fill="none"
-                    stroke="url(#lineGlow)"
-                    strokeWidth="1.5"
-                    strokeDasharray="4 4"
-                    markerEnd="url(#arrowhead)"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 1.1, ease: 'easeInOut', repeat: Infinity }}
-                  />
-
-                  {/* Node 1: WhatsApp */}
-                  <g>
-                    <motion.rect
-                      x="25" y="65" width="55" height="50" rx="8"
-                      fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.35)" strokeWidth="1"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.3, delay: 0.2, ease: 'backOut' }}
-                    />
-                    <text x="52" y="88" textAnchor="middle" fill="#25D366" fontSize="7" fontFamily="monospace" fontWeight="bold">
-                      whatsapp
-                    </text>
-                    <text x="52" y="100" textAnchor="middle" fill="rgba(37,211,102,0.6)" fontSize="6" fontFamily="monospace">
-                      trigger
-                    </text>
-                  </g>
-
-                  {/* Node 2: Agente IA */}
-                  <g>
-                    <motion.rect
-                      x="185" y="65" width="55" height="50" rx="8"
-                      fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.35)" strokeWidth="1"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.3, delay: 0.5, ease: 'backOut' }}
-                    />
-                    <text x="212" y="88" textAnchor="middle" fill="#F59E0B" fontSize="7" fontFamily="monospace" fontWeight="bold">
-                      agente_ia
-                    </text>
-                    <text x="212" y="100" textAnchor="middle" fill="rgba(245,158,11,0.6)" fontSize="6" fontFamily="monospace">
-                      process
-                    </text>
-                  </g>
-
-                  {/* Node 3: CRM */}
-                  <g>
-                    <motion.rect
-                      x="320" y="65" width="55" height="50" rx="8"
-                      fill="rgba(59,130,246,0.12)" stroke="rgba(59,130,246,0.35)" strokeWidth="1"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.3, delay: 0.8, ease: 'backOut' }}
-                    />
-                    <text x="347" y="88" textAnchor="middle" fill="#3B82F6" fontSize="7" fontFamily="monospace" fontWeight="bold">
-                      crm
-                    </text>
-                    <text x="347" y="100" textAnchor="middle" fill="rgba(59,130,246,0.6)" fontSize="6" fontFamily="monospace">
-                      update
-                    </text>
-                  </g>
-
-                  {/* Node 4: Respuesta */}
-                  <g>
-                    <motion.rect
-                      x="170" y="235" width="60" height="50" rx="8"
-                      fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.35)" strokeWidth="1"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.3, delay: 1.1, ease: 'backOut' }}
-                    />
-                    <text x="200" y="258" textAnchor="middle" fill="#10B981" fontSize="7" fontFamily="monospace" fontWeight="bold">
-                      respuesta
-                    </text>
-                    <text x="200" y="270" textAnchor="middle" fill="rgba(16,185,129,0.6)" fontSize="6" fontFamily="monospace">
-                      auto_msg
-                    </text>
-                  </g>
-                </svg>
-
-                {/* Status indicator */}
-                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[10px] text-text-secondary/40 font-mono">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500/60 animate-pulse" />
-                  running · workflow activo
-                </div>
-              </div>
+            <div className="p-0">
+              <img
+                src={heroWorkflow}
+                alt="Workflow de automatización n8n con agente IA conectado a WhatsApp y Supabase"
+                className="w-full h-auto"
+              />
             </div>
           </div>
 
@@ -242,7 +117,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute -left-4 top-10 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
+            className="absolute -left-4 top-17 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
           >
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#25D366]/15 text-[#25D366]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -260,7 +135,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="absolute -right-4 top-1/3 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
+            className="absolute -right-4 top-1/5 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
           >
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent/15 text-accent">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -299,7 +174,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.3 }}
-            className="absolute -right-2 -bottom-2 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
+            className="absolute -right-2 -bottom-10 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
           >
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#10B981]/15 text-[#10B981]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

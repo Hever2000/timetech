@@ -53,12 +53,12 @@ export default function HowIWork() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="relative"
             >
-              <div className="relative bg-surface/20 border border-border rounded-2xl p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/20">
+              <div className="relative bg-surface/20 border border-border rounded-2xl p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/50 ">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="font-display text-3xl font-black text-accent/20 leading-none">
+                  <span className="font-display text-3xl font-black text-accent/80 leading-none">
                     {step.number}
                   </span>
-                  <div className="flex-1 h-px bg-gradient-to-r from-accent/20 to-transparent" />
+                  <div className="flex-1 h-px bg-gradient-to-r from-accent to-transparent" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-text mb-3">
                   {step.title}
@@ -67,16 +67,6 @@ export default function HowIWork() {
                   {step.desc}
                 </p>
               </div>
-
-              {i < STEPS.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-[13px] -translate-y-1/2 z-10">
-                  <div className="w-6 h-6 rounded-full bg-bg border-2 border-accent/30 flex items-center justify-center">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.5)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              )}
             </motion.div>
           ))}
         </div>

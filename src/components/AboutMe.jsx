@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import fotoSanti from '../assets/foto-santi.png'
 
 const HIGHLIGHTS = [
   'AI Automation Developer',
@@ -26,8 +27,12 @@ export default function AboutMe() {
           >
             <div className="relative w-56 h-56 md:w-64 md:h-64 mx-auto md:mx-0">
               <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-3xl" />
-              <div className="relative w-full h-full rounded-2xl bg-surface border border-border overflow-hidden flex items-center justify-center">
-                <span className="font-display text-6xl">👨‍💻</span>
+              <div className="relative w-full h-full rounded-full bg-surface border border-border overflow-hidden">
+                <img
+                  src={fotoSanti}
+                  alt="Santi Coronel — AI Automation Developer"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
           </motion.div>
@@ -38,15 +43,15 @@ export default function AboutMe() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="md:col-span-3"
           >
-            <span className="text-xs font-medium text-accent uppercase tracking-[0.15em] mb-4 block">
+            <span className="text-s font-bold text-accent uppercase tracking-[0.15em] mb-4 block">
               Sobre mí
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="font-display text-5xl md:text-5xl font-bold tracking-tight mb-6">
               Ingeniería moderna para{' '}
               <span className="text-accent">problemas reales</span>
             </h2>
             <p className="text-text-secondary text-sm md:text-base leading-relaxed mb-8">
-              Soy Santi, AI Automation Developer. Combino mi background Full-Stack
+              Soy Santiago Coronel, AI Automation Developer. Combino mi background Full-Stack
               con inteligencia artificial para diseñar soluciones de automatización
               que resuelven problemas operativos concretos. No vendo tecnología por
               venderla — cada automatización está pensada para el contexto exacto de
