@@ -79,15 +79,15 @@ export default function Hero() {
             className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-xs text-text-secondary"
           >
             <span>n8n</span>
-            <span className="text-text-secondary/30">·</span>
+            <span className="text-text-secondary/80 text-l">·</span>
             <span>Claude</span>
-            <span className="text-text-secondary/30">·</span>
+            <span className="text-text-secondary/80 text-l">·</span>
             <span>OpenAI</span>
-            <span className="text-text-secondary/30">·</span>
+            <span className="text-text-secondary/80 text-l">·</span>
             <span>Supabase</span>
-            <span className="text-text-secondary/30">·</span>
+            <span className="text-text-secondary/80 text-l">·</span>
             <span>WhatsApp API</span>
-            <span className="text-text-secondary/30">·</span>
+            <span className="text-text-secondary/80 text-l">·</span>
             <span>MCP</span>
           </motion.div>
         </div>

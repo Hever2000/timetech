@@ -60,7 +60,7 @@ export default function Navbar() {
         >
           <span
             className={`absolute left-0 top-0 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? 'rotate-45 top-2' : ''
+              mobileOpen ? 'rotate-45 top-4' : ''
             }`}
           />
           <span
@@ -70,7 +70,7 @@ export default function Navbar() {
           />
           <span
             className={`absolute left-0 top-4 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? '-rotate-45 top-2' : ''
+              mobileOpen ? '-rotate-45 top-0' : ''
             }`}
           />
         </button>
