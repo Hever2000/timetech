@@ -34,7 +34,7 @@ export default function Hero() {
           >
             Automatiza los procesos de tu empresa con{' '}
             <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
-              automatización e IA.
+              sistemas conectados con IA.
             </span>
           </motion.h1>
 

@@ -5,17 +5,17 @@ import { useRef } from 'react'
 const BEFORE = [
   'Tareas manuales que consumen horas',
   'Leads perdidos sin seguimiento',
-  'Facturas cargadas una por una',
-  'Sistemas que no se hablan entre sí',
-  'Seguimientos que se olvidan',
+  'Facturas cargadas una por una y con errores',
+  'Sistemas desconectados y caóticos',
+  'Informacion que se pierde o se olvida',
 ]
 
 const AFTER = [
   'Automatización 24/7 sin intervención',
   'Leads calificados automáticamente',
-  'Facturas procesadas al instante',
-  'Integraciones que fluyen solas',
-  'Seguimientos automáticos multicanal',
+  'Facturas procesadas y ordenadas apenas llegan',
+  'Sistemas integrados y organizados',
+  'Información centralizada y accesible',
 ]
 
 function List({ items, accent, icon, isInView, delay = 0 }) {
@@ -54,7 +54,7 @@ export default function BeforeAfter() {
             Antes vs. Después
           </h2>
           <p className="text-text-secondary text-sm md:text-base max-w-md mx-auto">
-            De procesos manuales a operaciones automatizadas. El cambio es radical.
+            De procesos manuales a operaciones automatizadas. 
           </p>
         </motion.div>
 

@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: '¿Necesito conocimientos técnicos?',
-    a: 'Para nada. Yo me encargo de todo: diagnóstico, desarrollo e implementación. Solo necesitás contarme tu problema y definir los objetivos conmigo.',
+    a: 'Para nada. Yo me encargo de todo: diagnóstico, desarrollo, hosteo e implementación. Solo necesitás contarme tu problema y definir los objetivos conmigo.',
   },
   {
     q: '¿Qué herramientas utilizás?',
@@ -30,7 +30,7 @@ const FAQS = [
   },
 ]
 
-function AccordionItem({ item, isOpen, onToggle, index }) {
+function AccordionItem({ item, isOpen, onToggle }) {
   return (
     <div className="border-b border-border/50 last:border-b-0">
       <button

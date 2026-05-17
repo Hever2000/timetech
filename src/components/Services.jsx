@@ -5,38 +5,38 @@ import { useRef } from 'react'
 const SERVICES = [
   {
     title: 'Agentes IA para WhatsApp',
-    desc: 'ChatBots inteligentes que entienden contexto, resuelven consultas y ejecutan acciones en tiempo real.',
+    desc: 'ChatBots inteligentes para atención al cliente 24/7 y sistemas de agendamiento.',
     benefit: 'Atención 24/7 sin perder calidad',
     icon: '💬',
   },
   {
     title: 'Procesamiento de Facturas',
-    desc: 'Extracción, validación y registro automático de facturas con IA.',
+    desc: 'Extracción, validación, organización y registro automático de facturas con IA.',
     benefit: '0 carga manual de datos',
     icon: '📄',
   },
   {
     title: 'Integración de Sistemas',
     desc: 'Conexión entre CRMs, ERPs, APIs y herramientas que usás diariamente.',
-    benefit: 'Sistemas que realmente hablan entre sí',
+    benefit: 'Todos tus sistemas realmente conectados',
     icon: '🔗',
   },
   {
-    title: 'Generación de Leads',
-    desc: 'Calificación automática, seguimiento inteligente y scoring basado en IA.',
+    title: 'Generación/Calificación de Leads',
+    desc: ' Búsqueda, calificación automática y scoring de leads con IA.',
     benefit: 'Leads calificados sin fricción',
     icon: '🎯',
   },
   {
     title: 'Automatización Administrativa',
-    desc: 'Reportes, facturación, conciliación y tareas repetitivas sin intervención manual.',
+    desc: 'Reportes de todo tipo y tareas repetitivas sin intervención manual. ( Ej: reportes de lo hablado en reuniones )',
     benefit: 'Tu equipo enfocado en lo importante',
     icon: '⚙️',
   },
   {
-    title: 'Reportes y Seguimientos',
-    desc: 'Dashboards automáticos, reportes programados y seguimientos multicanal.',
-    benefit: 'Decisiones basadas en datos, siempre',
+    title: 'Sistemas RAG',
+    desc: 'Sistemas con acceso instantáneo a datos clave de tu empresa sin búsquedas manuales. Integrado en chatbots con IA.',
+    benefit: 'Conocimiento de tu empresa al alcance de la mano',
     icon: '📊',
   },
 ]
@@ -62,8 +62,7 @@ export default function Services() {
             <span className="text-accent">negocios reales</span>
           </h2>
           <p className="text-text-secondary text-sm md:text-base max-w-lg mx-auto">
-            No vendo chatbots genéricos. Resuelvo problemas operativos específicos
-            con ingeniería de automatización moderna.
+            Estos son algunos ejemplos o tipos de soluciones que diseño para mis clientes. Software diseñado a medida.
           </p>
         </motion.div>
 

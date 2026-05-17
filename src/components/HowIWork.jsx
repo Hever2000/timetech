@@ -6,17 +6,32 @@ const STEPS = [
   {
     number: '01',
     title: 'Diagnóstico',
-    desc: 'Analizo tus procesos actuales, identifico cuellos de botella y defino qué automatizar para maximizar impacto.',
+    desc: 'Analizo tus procesos actuales, identifico cuellos de botella y definimos qué automatizar para maximizar impacto.',
   },
   {
     number: '02',
-    title: 'Desarrollo',
-    desc: 'Construyo la solución con n8n, APIs e IA. Integro tus herramientas y diseño workflows robustos y escalables.',
+    title: 'Propuesta',
+    desc: 'Diseño una solución personalizada para el problema identificado y presento la propuesta comercial. ',
   },
   {
     number: '03',
-    title: 'Despliegue',
-    desc: 'Pongo en producción, monitoreo resultados y ajusto fino. Te quedás con una solución que funciona sin mantenimiento constante.',
+    title: 'Contrato',
+    desc: 'Una vez aprobada la propuesta, firmamos contrato con términos claros de alcance, tiempos y entregables.',
+  },
+  {
+    number: '04',
+    title: 'Desarrollo',
+    desc: 'Una vez aceptada la propuesta, construyo la solución. Integro tus herramientas y diseño workflows robustos y escalables.',
+  },
+  {
+    number: '05',
+    title: 'Entrega',
+    desc: 'Entrego la solución funcionando en tu entorno, con documentación clara y capacitación para tu equipo. Siempre disponible para soporte inicial.',
+  },
+  {
+    number: '06',
+    title: 'Mantenimiento',
+    desc: 'El mantenimiento incluye hosteo, monitoreo y ajustes del software (si es necesario) para garantizar el rendimiento óptimo de la solución.',
   },
 ]
 
@@ -40,7 +55,7 @@ export default function HowIWork() {
             Cómo trabajo
           </h2>
           <p className="text-text-secondary text-sm md:text-base max-w-md mx-auto">
-            De principio a fin, sin vueltas. Procesos claros, resultados concretos.
+            De principio a fin, sin vueltas. Terminos claros y transparentes, resultados concretos.
           </p>
         </motion.div>
 
