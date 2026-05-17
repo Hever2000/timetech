@@ -35,7 +35,7 @@ export default function CTA() {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="mailto:santi@ejemplo.com"
+            href="mailto:santicoronellancellotti@gmail.com"
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-medium px-8 py-3.5 rounded-xl transition-all duration-300 hover:shadow-[0_0_32px_-8px_rgba(245,158,11,0.5)]"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
