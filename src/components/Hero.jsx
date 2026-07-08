@@ -21,7 +21,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="mt-10 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-[88px]"
+          className="mt-10 font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl lg:text-[88px]"
         >
           Soluciones de software {' '}
           <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
