@@ -1,4 +1,4 @@
-# MarcaPersonalLanding — Agent Guidelines
+# TimeTech Landing — Agent Guidelines
 
 ## Build / Lint / Dev Commands
 
@@ -26,14 +26,14 @@ There is no test framework. No single-test command exists.
 
 ```
 src/
-├── components/     # One file per component, PascalCase
+├── components/
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
 │   ├── TechStack.jsx
 │   ├── BeforeAfter.jsx
 │   ├── Services.jsx
 │   ├── HowIWork.jsx
-│   ├── AboutMe.jsx
+│   ├── AboutTimeTech.jsx
 │   ├── FAQ.jsx
 │   ├── CTA.jsx
 │   └── Footer.jsx
@@ -103,9 +103,9 @@ All custom design tokens are defined in `src/index.css` via `@theme`:
 @theme {
   --color-bg: #0B0F14;
   --color-surface: #111827;
-  --color-accent: #F59E0B;
-  --color-accent-light: #FBBF24;
-  --color-accent-glow: rgba(245, 158, 11, 0.15);
+  --color-accent: #06D6A0;
+  --color-accent-light: #2DD4B8;
+  --color-accent-glow: rgba(6, 214, 160, 0.15);
   --color-text: #F9FAFB;
   --color-text-secondary: #9CA3AF;
   --color-border: rgba(255, 255, 255, 0.08);
@@ -128,7 +128,7 @@ const ref = useRef(null)
 const isInView = useInView(ref, { once: true, margin: '-100px' })
 
 <motion.div
-  ref={ref}  {/* put ref on the outermost section, not the motion div */}
+  ref={ref}
   initial={{ opacity: 0, y: 30 }}
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.5, delay: i * 0.08 }}
@@ -155,7 +155,7 @@ const isInView = useInView(ref, { once: true, margin: '-100px' })
 When using shadow glows that reference the accent color, hardcode the RGBA value directly:
 
 ```jsx
-hover:shadow-[0_0_32px_-8px_rgba(245,158,11,0.5)]
+hover:shadow-[0_0_32px_-8px_rgba(6,214,160,0.5)]
 ```
 
 If the accent color changes, update all hardcoded RGBA values to match `--color-accent`.

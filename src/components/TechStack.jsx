@@ -3,12 +3,12 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const TECH = [
-  { name: 'n8n', desc: 'Workflow automation' },
-  { name: 'WhatsApp API', desc: 'Business messaging' },
-  { name: 'Claude', desc: 'AI reasoning' },
-  { name: 'Supabase', desc: 'Backend & DB' },
-  { name: 'MCP', desc: 'AI protocols' },
-  { name: 'APIs REST', desc: 'Integrations' },
+  { name: 'React', desc: 'Frontend moderno' },
+  { name: 'Node.js', desc: 'Backend escalable' },
+  { name: 'Python', desc: 'IA & Automatización' },
+  { name: 'TypeScript', desc: 'Código robusto' },
+  { name: 'TailwindCSS', desc: 'Diseño eficiente' },
+  { name: 'PostgreSQL', desc: 'Datos confiables' },
 ]
 
 export default function TechStack() {
@@ -24,7 +24,7 @@ export default function TechStack() {
           transition={{ duration: 0.5 }}
           className="text-xs font-medium text-text-secondary/50 uppercase tracking-[0.15em] text-center mb-10"
         >
-          Stack tecnológico
+          Tecnologías con las que trabajamos
         </motion.p>
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-16">

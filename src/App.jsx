@@ -4,7 +4,7 @@ import TechStack from './components/TechStack'
 import BeforeAfter from './components/BeforeAfter'
 import Services from './components/Services'
 import HowIWork from './components/HowIWork'
-import AboutMe from './components/AboutMe'
+import AboutTimeTech from './components/AboutTimeTech'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -19,7 +19,7 @@ export default function App() {
         <BeforeAfter />
         <Services />
         <HowIWork />
-        <AboutMe />
+        <AboutTimeTech />
         <FAQ />
         <CTA />
       </main>

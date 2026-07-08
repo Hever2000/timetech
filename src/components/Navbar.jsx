@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const NAV_LINKS = [
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Cómo trabajo', href: '#como-trabajo' },
+  { label: 'Metodología', href: '#metodologia' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -29,10 +29,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-display text-lg font-bold tracking-tight">
-          <span className="text-accent">✦</span>{' '}
-          <span className="text-text">SantiCoronel</span>
-          <span className="text-accent">AI</span>
+        <a href="#" className="font-display text-lg font-bold tracking-tight flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(6,214,160,0.6)]" />
+          <span className="text-text">Time</span>
+          <span className="text-accent">Tech</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -47,7 +47,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contacto"
-            className="text-sm font-medium bg-accent hover:bg-accent-light text-white px-5 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_-4px_rgba(245,158,11,0.4)]"
+            className="text-sm font-medium bg-accent hover:bg-accent-light text-white px-5 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_-4px_rgba(6,214,160,0.4)]"
           >
             Hablemos
           </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
         >
           <span
             className={`absolute left-0 top-0 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? 'rotate-45 top-4' : ''
+              mobileOpen ? 'rotate-45 top-2' : ''
             }`}
           />
           <span
@@ -70,7 +70,7 @@ export default function Navbar() {
           />
           <span
             className={`absolute left-0 top-4 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? '-rotate-45 top-0' : ''
+              mobileOpen ? '-rotate-45 top-2' : ''
             }`}
           />
         </button>

@@ -6,32 +6,22 @@ const STEPS = [
   {
     number: '01',
     title: 'Diagnóstico',
-    desc: 'Analizo tus procesos actuales, identifico cuellos de botella y definimos qué automatizar para maximizar impacto.',
+    desc: 'Analizamos tus procesos actuales, identificamos los puntos de dolor y definimos juntos qué solución se adapta mejor a tu operación.',
   },
   {
     number: '02',
     title: 'Propuesta',
-    desc: 'Diseño una solución personalizada para el problema identificado y presento la propuesta comercial. ',
+    desc: 'Diseñamos la solución a medida y te presentamos una propuesta clara con alcance, tiempos y presupuesto. Sin letra chica.',
   },
   {
     number: '03',
-    title: 'Contrato',
-    desc: 'Una vez aprobada la propuesta, firmamos contrato con términos claros de alcance, tiempos y entregables.',
+    title: 'Desarrollo',
+    desc: 'Construimos el software con metodologías ágiles. Integramos tus herramientas y diseñamos sistemas robustos y escalables.',
   },
   {
     number: '04',
-    title: 'Desarrollo',
-    desc: 'Una vez aceptada la propuesta, construyo la solución. Integro tus herramientas y diseño workflows robustos y escalables.',
-  },
-  {
-    number: '05',
-    title: 'Entrega',
-    desc: 'Entrego la solución funcionando en tu entorno, con documentación clara y capacitación para tu equipo. Siempre disponible para soporte inicial.',
-  },
-  {
-    number: '06',
-    title: 'Mantenimiento',
-    desc: 'El mantenimiento incluye hosteo, monitoreo y ajustes del software (si es necesario) para garantizar el rendimiento óptimo de la solución.',
+    title: 'Entrega y Soporte',
+    desc: 'Entregamos la solución funcionando en tu entorno, capacitamos a tu equipo y te acompañamos con soporte continuo para garantizar resultados.',
   },
 ]
 
@@ -40,7 +30,7 @@ export default function HowIWork() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="como-trabajo" ref={ref} className="py-24 border-t border-border/50">
+    <section id="metodologia" ref={ref} className="py-24 border-t border-border/50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,18 +38,18 @@ export default function HowIWork() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-s font-bold text-accent uppercase tracking-[0.15em] mb-4 block ">
+          <span className="text-xs font-bold text-accent uppercase tracking-[0.15em] mb-4 block">
             Metodología
           </span>
           <h2 className="font-display text-5xl md:text-5xl font-bold tracking-tight mb-6">
-            Cómo trabajo
+            Cómo trabajamos
           </h2>
           <p className="text-text-secondary text-sm md:text-base max-w-md mx-auto">
-            De principio a fin, sin vueltas. Terminos claros y transparentes, resultados concretos.
+            De principio a fin, sin vueltas. Procesos claros, resultados concretos.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-4 gap-5">
           {STEPS.map((step, i) => (
             <motion.div
               key={step.number}
@@ -68,7 +58,7 @@ export default function HowIWork() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="relative"
             >
-              <div className="relative bg-surface/20 border border-border rounded-2xl p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/50 ">
+              <div className="relative bg-surface/20 border border-border rounded-2xl p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/50">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="font-display text-3xl font-black text-accent/80 leading-none">
                     {step.number}

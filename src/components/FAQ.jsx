@@ -5,28 +5,28 @@ import { useRef } from 'react'
 
 const FAQS = [
   {
-    q: '¿Qué procesos se pueden automatizar?',
-    a: 'Cualquier proceso repetitivo basado en reglas: atención al cliente, carga de datos, facturación, reportes, seguimientos, integraciones entre sistemas. Si lo hacés manualmente más de 2 veces por semana, es automatizable.',
+    q: '¿Qué tipo de proyectos hacen?',
+    a: 'Todo tipo de soluciones de software: chatbots con IA, páginas web, automatizaciones, integraciones entre sistemas, dashboards y desarrollo a medida. Si tu problema se resuelve con software, lo construimos.',
   },
   {
-    q: '¿Trabajás con empresas argentinas?',
-    a: 'Sí, mi foco principal son pymes y empresas argentinas. Conozco el contexto local, las herramientas que se usan acá y los desafíos operativos del día a día.',
+    q: '¿Trabajan con empresas argentinas?',
+    a: 'Sí, nuestro foco principal son pymes y empresas argentinas. Conocemos el contexto local, los desafíos operativos del día a día y las herramientas que se usan acá.',
   },
   {
-    q: '¿Se puede integrar WhatsApp?',
-    a: 'Sí, es una de las integraciones más potentes. Automatizo respuestas, notificaciones, agendamiento de turnos y atención al cliente directamente desde WhatsApp Business API.',
+    q: '¿Cuánto tiempo toma desarrollar un proyecto?',
+    a: 'Depende de la complejidad. Una landing page puede estar lista en días, mientras que un sistema a medida puede llevar semanas. En el diagnóstico inicial te damos un timeline claro y realista.',
   },
   {
-    q: '¿Las automatizaciones son personalizadas?',
-    a: 'Siempre. Cada automatización se diseña desde cero para tu operación específica. No vendo plantillas genéricas — cada solución es única porque cada negocio también lo es.',
+    q: '¿Las soluciones son personalizadas?',
+    a: 'Siempre. Cada proyecto se diseña desde cero para tu operación específica. No vendemos plantillas genéricas — cada solución es única porque cada negocio también lo es.',
   },
   {
     q: '¿Necesito conocimientos técnicos?',
-    a: 'Para nada. Yo me encargo de todo: diagnóstico, desarrollo, hosteo e implementación. Solo necesitás contarme tu problema y definir los objetivos conmigo.',
+    a: 'Para nada. Nosotros nos encargamos de todo: diagnóstico, desarrollo, implementación y soporte. Solo necesitás contarnos tu problema y definir los objetivos con nosotros.',
   },
   {
-    q: '¿Qué herramientas utilizás?',
-    a: 'Principalmente n8n, WhatsApp API, Supabase, OpenAI, Claude, MCP y APIs REST. Pero cada solución usa las herramientas adecuadas para el problema específico.',
+    q: '¿Dan mantenimiento después de entregar?',
+    a: 'Sí. Ofrecemos planes de soporte y mantenimiento continuo para garantizar que el software funcione siempre al 100%. Nos ocupamos de actualizaciones, monitoreo y ajustes.',
   },
 ]
 

@@ -19,12 +19,12 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-[1.1]">
-            Tu empresa no necesita más{' '}
-            <span className="text-accent">tareas manuales.</span>
+            Listo para transformar tu empresa con{' '}
+            <span className="text-accent">soluciones de software?</span>
           </h2>
           <p className="text-text-secondary text-sm md:text-base max-w-lg mx-auto mb-10">
-            Hablemos de lo que necesitás automatizar. Sin vueltas, sin
-            compromiso, solo soluciones.
+            Hablemos de lo que necesitás. Sin vueltas, sin compromiso, solo soluciones
+            que realmente funcionan.
           </p>
         </motion.div>
 
@@ -35,8 +35,8 @@ export default function CTA() {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="mailto:santicoronellancellotti@gmail.com"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-medium px-8 py-3.5 rounded-xl transition-all duration-300 hover:shadow-[0_0_32px_-8px_rgba(245,158,11,0.5)]"
+            href="mailto:hola@timetech.dev"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-medium px-8 py-3.5 rounded-xl transition-all duration-300 hover:shadow-[0_0_32px_-8px_rgba(6,214,160,0.5)]"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
