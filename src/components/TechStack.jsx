@@ -2,14 +2,12 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const TECH = [
-  { name: 'N8N', desc: 'Automatización de flujos' },
-  { name: 'Next.js', desc: 'Framework frontend' },
-  { name: 'Python', desc: 'IA & Automatización' },
-  { name: 'PostgreSQL', desc: 'Base de datos relacional' },
-  { name: 'Claude', desc: 'Asistente de IA' },
-  { name: 'LangChain', desc: 'Framework de IA' },
-  { name: 'Openclaw', desc: 'Plataforma de IA' },
+const SOLUTIONS = [
+  { name: 'Chatbots', desc: 'Atención al cliente 24/7 vía WhatsApp y web' },
+  { name: 'Web', desc: 'Landing pages y sitios corporativos profesionales' },
+  { name: 'Automatización', desc: 'Workflows inteligentes que eliminan tareas repetitivas' },
+  { name: 'Integraciones', desc: 'CRMs, ERPs y APIs sincronizados sin fricción' },
+  { name: 'Sistemas a Medida', desc: 'Software custom diseñado para tu operación' },
 ]
 
 export default function TechStack() {
@@ -23,24 +21,24 @@ export default function TechStack() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-xs font-medium text-text-secondary/50 uppercase tracking-[0.15em] text-center mb-10"
+          className="text-xs font-medium text-text-secondary/50 uppercase tracking-[0.15em] text-center mb-12"
         >
-          Tecnologías con las que trabajamos
+          Soluciones que ofrecemos
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-          {TECH.map((item, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          {SOLUTIONS.map((item, i) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group text-center"
+              className="group flex flex-col items-center text-center"
             >
-              <span className="font-display text-xl md:text-2xl font-bold text-text/30 group-hover:text-text/60 transition-colors duration-500">
+              <span className="font-display text-lg md:text-xl font-bold text-text/40 group-hover:text-accent transition-colors duration-500">
                 {item.name}
               </span>
-              <p className="text-[11px] text-text-secondary/20 group-hover:text-text-secondary/40 transition-colors duration-500 mt-1">
+              <p className="text-[12px] text-text-secondary/30 group-hover:text-text-secondary/60 transition-colors duration-500 mt-2 leading-relaxed max-w-[160px]">
                 {item.desc}
               </p>
             </motion.div>
