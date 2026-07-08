@@ -3,12 +3,13 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const TECH = [
-  { name: 'React', desc: 'Frontend moderno' },
-  { name: 'Node.js', desc: 'Backend escalable' },
+  { name: 'N8N', desc: 'Automatización de flujos' },
+  { name: 'Next.js', desc: 'Framework frontend' },
   { name: 'Python', desc: 'IA & Automatización' },
-  { name: 'TypeScript', desc: 'Código robusto' },
-  { name: 'TailwindCSS', desc: 'Diseño eficiente' },
-  { name: 'PostgreSQL', desc: 'Datos confiables' },
+  { name: 'PostgreSQL', desc: 'Base de datos relacional' },
+  { name: 'Claude', desc: 'Asistente de IA' },
+  { name: 'LangChain', desc: 'Framework de IA' },
+  { name: 'Openclaw', desc: 'Plataforma de IA' },
 ]
 
 export default function TechStack() {

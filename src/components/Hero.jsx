@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-text-secondary md:text-lg"
           >
-            En TimeTech creamos chatbots con IA, páginas web, automatizaciones, integraciones y sistemas a
+            En TimeTech creamos soluciones a
             medida para que tu empresa ahorre tiempo, reduzca costos y escale sin límites.
           </motion.p>
 
@@ -94,8 +94,6 @@ export default function Hero() {
             <span>Integraciones</span>
             <span className="text-text-secondary/40">·</span>
             <span>Sistemas a medida</span>
-            <span className="text-text-secondary/40">·</span>
-            <span>Dashboards</span>
           </motion.div>
         </div>
 
@@ -178,103 +176,10 @@ export default function Hero() {
                   transition={{ duration: 1, delay: 1.8 }}
                 >
                   <circle cx="200" cy="160" r="40" fill="url(#node-glow-1)" />
-                  <text
-                    x="200"
-                    y="158"
-                    textAnchor="middle"
-                    fill="#06D6A0"
-                    fontSize="12"
-                    fontWeight="700"
-                    fontFamily="Satoshi, sans-serif"
-                  >
-                    Time
-                  </text>
-                  <text
-                    x="200"
-                    y="172"
-                    textAnchor="middle"
-                    fill="#F9FAFB"
-                    fontSize="10"
-                    fontWeight="500"
-                    fontFamily="Satoshi, sans-serif"
-                  >
-                    TECH
-                  </text>
                 </motion.g>
               </svg>
             </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute -left-4 top-17 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
-          >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#25D366]/15 text-[#25D366]">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-            </span>
-            <div className="text-xs">
-              <div className="font-medium text-text">Chatbot IA</div>
-              <div className="text-text-secondary">Cliente atendido al instante</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="absolute -right-4 top-1/5 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
-          >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#06D6A0]/15 text-accent">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-            </span>
-            <div className="text-xs">
-              <div className="font-medium text-text">Dashboard</div>
-              <div className="text-text-secondary">Datos en tiempo real</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="absolute -left-2 -bottom-4 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
-          >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#8B5CF6]/15 text-[#8B5CF6]">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-              </svg>
-            </span>
-            <div className="text-xs">
-              <div className="font-medium text-text">Integraciones</div>
-              <div className="text-text-secondary">Sistemas conectados</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="absolute -right-2 -bottom-10 hidden items-center gap-3 rounded-xl border border-border bg-surface/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg sm:flex"
-          >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-[#F59E0B]/15 text-[#F59E0B]">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-            </span>
-            <div className="text-xs">
-              <div className="font-medium text-text">Automatización</div>
-              <div className="text-text-secondary">Procesos optimizados</div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
