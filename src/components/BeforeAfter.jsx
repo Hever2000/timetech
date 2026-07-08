@@ -67,7 +67,7 @@ export default function BeforeAfter() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-red-950/10 border border-red-900/20 rounded-2xl p-8"
+            className="bg-red-950/10 border border-red-900/20 rounded-2xl p-5 md:p-8"
           >
             <h3 className="font-display text-lg font-bold text-red-400 mb-6 flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center text-xs text-red-400">✕</span>
@@ -86,7 +86,7 @@ export default function BeforeAfter() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-emerald-950/10 border border-emerald-900/20 rounded-2xl p-8"
+            className="bg-emerald-950/10 border border-emerald-900/20 rounded-2xl p-5 md:p-8"
           >
             <h3 className="font-display text-lg font-bold text-emerald-400 mb-6 flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs text-emerald-400">✓</span>

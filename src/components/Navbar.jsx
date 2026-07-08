@@ -23,14 +23,15 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-bg/80 backdrop-blur-xl border-b border-border'
-          : 'bg-transparent'
+        mobileOpen
+          ? 'bg-bg/95 backdrop-blur-xl border-b border-border'
+          : scrolled
+            ? 'bg-bg/80 backdrop-blur-xl border-b border-border'
+            : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-display text-lg font-bold tracking-tight flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(6,214,160,0.6)]" />
           <span className="text-text">Time</span>
           <span className="text-accent">Tech</span>
         </a>
@@ -55,22 +56,22 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative w-6 h-5"
+          className="md:hidden flex flex-col items-center justify-center w-9 h-9 gap-[3px]"
           aria-label="Menú"
         >
           <span
-            className={`absolute left-0 top-0 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? 'rotate-45 top-2' : ''
+            className={`w-[18px] h-[2px] bg-text rounded transition-all duration-300 ${
+              mobileOpen ? 'rotate-45 translate-y-[5px]' : ''
             }`}
           />
           <span
-            className={`absolute left-0 top-2 w-full h-[2px] bg-text transition-all duration-300 ${
+            className={`w-[18px] h-[2px] bg-text rounded transition-all duration-300 ${
               mobileOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`absolute left-0 top-4 w-full h-[2px] bg-text transition-all duration-300 ${
-              mobileOpen ? '-rotate-45 top-2' : ''
+            className={`w-[18px] h-[2px] bg-text rounded transition-all duration-300 ${
+              mobileOpen ? '-rotate-45 -translate-y-[5px]' : ''
             }`}
           />
         </button>

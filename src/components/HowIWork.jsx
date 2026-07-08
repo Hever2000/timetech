@@ -58,7 +58,7 @@ export default function HowIWork() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="relative"
             >
-              <div className="relative bg-surface/20 border border-border rounded-2xl p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/50">
+              <div className="relative bg-surface/20 border border-border rounded-2xl p-5 md:p-8 h-full transition-all duration-500 hover:bg-surface/40 hover:border-accent/50">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="font-display text-3xl font-black text-accent/80 leading-none">
                     {step.number}
