@@ -2,34 +2,17 @@
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'General Sans', ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg: #0B0F14;
-  --color-surface: #111827;
-  --color-accent: #06D6A0;
-  --color-accent-light: #2DD4B8;
-  --color-accent-glow: rgba(6, 214, 160, 0.15);
-  --color-text: #F9FAFB;
-  --color-text-secondary: #9CA3AF;
-  --color-border: rgba(255, 255, 255, 0.08);
-
-  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-line-dash: line-dash 20s linear infinite;
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes line-dash {
-  to { stroke-dashoffset: -100; }
+  --color-bg: #0A0A0B;
+  --color-surface: #232429;
+  --color-accent: #C89840;
+  --color-accent-light: #D8A850;
+  --color-accent-dark: #A87828;
+  --color-accent-glow: rgba(200, 152, 64, 0.15);
+  --color-text: #F5F4F2;
+  --color-text-secondary: #9C9A96;
+  --color-border: rgba(255, 255, 255, 0.06);
 }
 
 html {
@@ -46,6 +29,8 @@ body {
 }
 
 ::selection {
-  background: rgba(6, 214, 160, 0.3);
-  color: #fff;
+  background: rgba(200, 152, 64, 0.3);
+  color: #0A0A0B;
 }
+
+

@@ -24,16 +24,16 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         mobileOpen
-          ? 'bg-bg/95 backdrop-blur-xl border-b border-border'
+          ? 'bg-bg'
           : scrolled
-            ? 'bg-bg/80 backdrop-blur-xl border-b border-border'
+            ? 'bg-bg/70 backdrop-blur-xl border-b border-accent/10'
             : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-display text-lg font-bold tracking-tight flex items-center gap-1.5">
-          <span className="text-text">Time</span>
-          <span className="text-accent">Tech</span>
+      <div className="max-w-6xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
+        <a href="#" className="font-display text-lg font-medium tracking-tight flex items-center gap-2">
+          <img src="/logo-timetech.PNG" alt="" className="h-6 w-auto" />
+          <span className="text-text">TIMETECH</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -41,14 +41,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-text transition-colors duration-300"
+              className="text-sm text-text-secondary hover:text-text transition-colors duration-300 tracking-wide"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contacto"
-            className="text-sm font-medium bg-accent hover:bg-accent-light text-white px-5 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_-4px_rgba(6,214,160,0.4)]"
+            className="text-sm font-medium text-accent border border-accent/40 hover:bg-accent hover:text-bg px-5 py-2 rounded-full transition-all duration-300"
           >
             Hablemos
           </a>
@@ -80,29 +80,31 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg/95 backdrop-blur-xl border-b border-border overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="md:hidden fixed inset-0 top-16 bg-bg z-40"
           >
-            <div className="px-6 py-6 flex flex-col gap-4">
+            <div className="px-6 py-12 flex flex-col gap-6">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm text-text-secondary hover:text-text transition-colors"
+                  className="font-display text-3xl font-light text-text hover:text-accent transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contacto"
-                onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium bg-accent text-white px-5 py-2.5 rounded-lg text-center transition-all"
-              >
-                Hablemos
-              </a>
+              <div className="mt-8 pt-8 border-t border-accent/20">
+                <a
+                  href="#contacto"
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-block text-sm font-medium bg-accent text-bg px-6 py-3 rounded-full transition-all"
+                >
+                  Hablemos
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

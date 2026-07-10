@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
 const BEFORE = [
   'Tareas manuales que consumen horas del equipo',
@@ -18,19 +17,35 @@ const AFTER = [
   'Herramientas diseñadas para hacer crecer tu negocio',
 ]
 
-function List({ items, accent, icon, isInView, delay = 0 }) {
+function List({ items, variant, isInView, delay = 0 }) {
   return (
     <ul className="space-y-4">
       {items.map((item, i) => (
         <motion.li
           key={item}
-          initial={{ opacity: 0, x: accent === 'text-red-400' ? -20 : 20 }}
+          initial={{ opacity: 0, x: variant === 'before' ? -20 : 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.4, delay: delay + i * 0.1 }}
           className="flex items-start gap-3"
         >
-          <span className={`mt-0.5 flex-shrink-0 ${accent}`}>{icon}</span>
-          <span className="text-sm md:text-base text-text-secondary">{item}</span>
+          {variant === 'before' ? (
+            <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border border-text-secondary/30 flex items-center justify-center">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-text-secondary/40">
+                <line x1="18" y1="6" x2="6" y2="18" />
+              </svg>
+            </span>
+          ) : (
+            <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+          )}
+          <span className={`text-sm md:text-base leading-relaxed ${
+            variant === 'before' ? 'text-text-secondary' : 'text-text'
+          }`}>
+            {item}
+          </span>
         </motion.li>
       ))}
     </ul>
@@ -42,63 +57,49 @@ export default function BeforeAfter() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="py-24 border-t border-border/50">
+    <section ref={ref} className="py-24 md:py-32 border-t border-accent/10">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="text-xs font-bold text-accent uppercase tracking-[0.15em] mb-4 block">
+          <span className="text-xs text-accent uppercase tracking-[0.2em] block mb-6">
             El problema vs. La solución
           </span>
-          <h2 className="font-display text-5xl md:text-5xl font-bold tracking-tight mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-tight leading-[1.05]">
             Sin TimeTech vs.{' '}
-            <span className="text-accent">Con TimeTech</span>
+            <span className="text-accent font-medium">Con TimeTech</span>
           </h2>
-          <p className="text-text-secondary text-sm md:text-base max-w-md mx-auto">
+          <p className="text-text-secondary text-sm md:text-base mt-4 max-w-lg">
             De procesos manuales y sistemas desconectados a una operación automatizada y eficiente.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-red-950/10 border border-red-900/20 rounded-2xl p-5 md:p-8"
+            className="bg-white/[0.02] border border-accent/5 rounded-2xl p-6 md:p-8"
           >
-            <h3 className="font-display text-lg font-bold text-red-400 mb-6 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center text-xs text-red-400">✕</span>
+            <h3 className="font-display text-sm font-medium text-text-secondary/60 uppercase tracking-widest mb-6">
               Sin TimeTech
             </h3>
-            <List
-              items={BEFORE}
-              accent="text-red-400"
-              icon="✕"
-              isInView={isInView}
-              delay={0.2}
-            />
+            <List items={BEFORE} variant="before" isInView={isInView} delay={0.2} />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-emerald-950/10 border border-emerald-900/20 rounded-2xl p-5 md:p-8"
+            className="bg-accent/[0.02] border border-accent/15 rounded-2xl p-6 md:p-8"
           >
-            <h3 className="font-display text-lg font-bold text-emerald-400 mb-6 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs text-emerald-400">✓</span>
+            <h3 className="font-display text-sm font-medium text-accent uppercase tracking-widest mb-6">
               Con TimeTech
             </h3>
-            <List
-              items={AFTER}
-              accent="text-emerald-400"
-              icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>}
-              isInView={isInView}
-              delay={0.4}
-            />
+            <List items={AFTER} variant="after" isInView={isInView} delay={0.4} />
           </motion.div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import TechStack from './components/TechStack'
-import BeforeAfter from './components/BeforeAfter'
+import TrustSection from './components/TrustSection'
 import Services from './components/Services'
+import BeforeAfter from './components/BeforeAfter'
 import HowIWork from './components/HowIWork'
 import AboutTimeTech from './components/AboutTimeTech'
 import FAQ from './components/FAQ'
@@ -15,9 +15,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <TechStack />
-        <BeforeAfter />
+        <TrustSection />
         <Services />
+        <BeforeAfter />
         <HowIWork />
         <AboutTimeTech />
         <FAQ />
